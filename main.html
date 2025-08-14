@@ -6,9 +6,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+	<style>
+    /* Page setup */
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #f7fafc;
+      padding: 40px 16px;
+      color: #1a202c;
+    }
+
+    /* Table container for nicer centering */
+    .table-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;           /* required for clean grid look */
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;                    /* keeps rounded corners on header */
+      box-shadow: 0 6px 18px rgba(0,0,0,.06);
+    }
+
+    caption {
+      caption-side: top;
+      padding: 12px 16px 18px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #2b6cb0;
+      text-align: left;
+    }
+
+    thead {
+      background: linear-gradient(90deg, #2a4365, #2b6cb0);
+      color: #fff;
+    }
+
+    thead th {
+      text-align: left;
+      letter-spacing: .3px;
+      font-weight: 700;
+      padding: 14px 16px;
+      border-bottom: 2px solid rgba(255,255,255,.2);
+      white-space: nowrap;
+    }
+
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    /* Zebra striping for readability */
+    tbody tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    /* Emphasize best numbers */
+    .good {
+      color: #2f855a;       /* green */
+      font-weight: 600;
+    }
+
+    .bad {
+      color: #c53030;       /* red */
+      font-weight: 600;
+    }
+
+    /* Compact number cells */
+    .num {
+      text-align: right;
+      width: 110px;
+    }
+
+    /* Row hover */
+    tbody tr:hover {
+      background: #edf2f7;
+    }
+  </style>
 </head>
 <body>
-    <!-- add table here -->
+   <div class="table-wrap">
+    <table aria-label="Football Match Statistics">
+      <caption>Football Match Stats — Team Alpha vs Team Beta (Sample)</caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Statistic</th>
+          <th scope="col">Team Alpha</th>
+          <th scope="col">Team Beta</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Goals</td>
+          <td class="num good">3</td>
+          <td class="num">1</td>
+        </tr>
+        <tr>
+          <td>Shots (On Target)</td>
+          <td class="num">14 (7)</td>
+          <td class="num">9 (3)</td>
+        </tr>
+        <tr>
+          <td>Possession %</td>
+          <td class="num">58%</td>
+          <td class="num">42%</td>
+        </tr>
+        <tr>
+          <td>Pass Accuracy</td>
+          <td class="num">87%</td>
+          <td class="num">81%</td>
+        </tr>
+        <tr>
+          <td>Fouls</td>
+          <td class="num">10</td>
+          <td class="num bad">14</td>
+        </tr>
+        <tr>
+          <td>Corners</td>
+          <td class="num">6</td>
+          <td class="num">4</td>
+        </tr>
+        <tr>
+          <td>Yellow / Red Cards</td>
+          <td class="num">2 / 0</td>
+          <td class="num">3 / 0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
         
 </body>
